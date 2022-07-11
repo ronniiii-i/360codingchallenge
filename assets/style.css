@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* z-index: 0; */
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -15,15 +16,26 @@ button {
 .hero {
     /*     background-image: url("img/couch.png");
     background-size: contain; */
-    background: url("img/couch.png") no-repeat bottom rgb(202 138 4);
+    background: url("img/couch.png") no-repeat;
+    background-position: 50% 80%;
     background-size: 90%;
+}
+.hero .grad_bg{
+    position: absolute;
+    z-index: -2;
+    background: linear-gradient(#ca8a04, #facc15);
+    left: 0;
+    right: 0;
+    /* bottom: 150px; */
+    height: 100vh;
 }
 .hero .nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: rgb(202 138 4); */
+    /* background-color: #ca8a04; */
+    padding: 2vw;
 }
 .hero .nav .menu ul li {
     display: inline-block;
@@ -43,8 +55,31 @@ button {
     align-items: center;
     justify-content: center;
 }
-.hero .main *{
+.hero .main img{
     padding: 1vw;
+}
+.hero .button{
+    width: 100%;
+    text-align: center;
+    padding: 2vw;
+}
+.hero .button button{
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #ca8a04;
+    font-weight: 700;
+    font-size: 16px;
+    margin: auto;
+    /* box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000, 0 0 #0000,0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1); */
+}
+.hero .button button:hover{
+    background-color: #dc2626;
+    color: white;
+}
+.hero .button button img{
+    width: 20px;
 }
 .offers {
     display: flex;
@@ -56,6 +91,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1vw;
 }
 
 .offers div .col {
@@ -63,7 +99,19 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 30%;
+    width: 25%;
+    /* flex: 1 1; */
+}
+.offers div .col .border{
+    border: 7px solid #ca8a04;
+    border-radius: 1000px;
+    padding: 15px;
+}
+.offers div .col h3{
+    font-size: 24px;
+}
+.offers div .col p{
+    font-size: 16px;
 }
 .partners {
     text-align: center;
@@ -154,4 +202,12 @@ button {
     border: 3px solid rgb(202 138 4);
     border-radius: 5px;
     display: block;
+    margin-bottom: 1vw;
+}
+.contact form label{
+    display: block;
+    /* margin-top: 1vw; */
+}
+.contact form textarea{
+    resize: none;
 }
