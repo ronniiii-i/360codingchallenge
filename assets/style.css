@@ -43,6 +43,10 @@ button {
     height: 2px;
     background-color: black;
 }
+.disappear{
+    display: none;
+}
+.line{}
 .hero .grad_bg{
     position: absolute;
     z-index: -2;
@@ -53,7 +57,7 @@ button {
     height: 100vh;
 }
 .hero nav.collapse_menu{
-    display: none;
+    display: flex;
     position: fixed;
     left: 0;
     right: 0;
@@ -62,9 +66,9 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
-.show{
-    display: flex;
+.hero nav.collapse_menu.show{
     top: 0;
     bottom: 0;
 }
@@ -407,9 +411,9 @@ button {
         /* display: block; */
         padding: 2vw;
     }
-    .hero nav.collapse_menu{
+    /* .hero nav.collapse_menu{
         display: flex;
-    }
+    } */
     .hero nav .menu,
     .hero nav .buttons{
         display: none;
