@@ -520,3 +520,38 @@ button {
         height: 70%;
     }
 }
+@media screen and (min-height: 1300px){
+    .hero .grad_bg{
+        height: 45%!important;
+    }
+}
+@media screen and (min-height: 1100px){
+    .hero .grad_bg{
+        height: 50%;
+    }
+}
+@media screen and (max-height: 1099px){
+    .hero .grad_bg{
+        height: 60%;
+    }
+}
+@media screen and (max-height: 1000px){
+    .hero .grad_bg{
+        height: 57%;
+    }
+}
+/* @media screen and (max-height: 900px){
+    .hero .grad_bg{
+        height: 60%;
+    }
+} */
+@media screen and (max-height: 800px){
+    .hero .grad_bg{
+        height: 70%;
+    }
+}
+@media screen and (max-height: 600px){
+    .hero .grad_bg{
+        height: 85%;
+    }
+}
