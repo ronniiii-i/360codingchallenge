@@ -7,6 +7,12 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+h1{
+    font-size: 36px;
+}
+p, span{
+    font-size: 16px;
+}
 button {
     padding: 10px 20px;
     border: none;
@@ -40,11 +46,27 @@ button {
 .hero .nav .menu ul li {
     display: inline-block;
 }
+.hero .nav .menu ul li a{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.hero .nav .menu ul li a:hover{
+    opacity: 0.75;
+}
 .hero .nav .buttons button{
     color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px;
+}
+.hero .nav .buttons button:hover{
+    opacity: 0.75;
 }
 .hero .nav .buttons button:nth-child(1){
-    background-color: red;
+    background-color: #ff4444;
 }
 .hero .nav .buttons button:nth-child(2){
     background-color: black;
@@ -72,7 +94,7 @@ button {
     font-weight: 700;
     font-size: 16px;
     margin: auto;
-    /* box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000, 0 0 #0000,0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1); */
+    box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000, 0 0 #0000,0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
 }
 .hero .button button:hover{
     background-color: #dc2626;
@@ -119,12 +141,17 @@ button {
     background-color: black;
 }
 .partners h1{
-    color: rgb(202 138 4)
+    color: rgb(202 138 4);
+    font-size: 36px;
+    padding: 16px
 }
 .partners p{
     color: white; 
-    width: 50%;
+    width: 100%;
+    max-width: 32rem;
     margin: auto;
+    font-size: 16px;
+    padding: 16px;
 }
 .partners .our_partners {
     padding: 2vw;
@@ -136,30 +163,33 @@ button {
     margin: auto;
 }
 .partners .our_partners img {
-    width: 100px;
+    width: 112px;
     background-color: white;
-    margin: 1vw 3vw;
+    margin: 2vw 3vw;
     padding: 10px;
     display: inline-block;
-    height: 100px;
+    height: 112px;
     border-radius: 10px;
 }
 .cta {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .cta .content{
     width: 40%;
     padding-left: 5vw;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* height: inherit; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
-.cta .content *{
+.cta .content h1{
     margin-top: 2vw;
+}
+.cta .content p{
+    margin-top: 1vw;
 }
 .cta .content button{
     width: 30%;
@@ -168,16 +198,18 @@ button {
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1);
+    margin: 3vw 0;
 }
 .cta .image{
     width: 50%;
 }
 .cta .image img{
-    width: 75%;
+    width: 80%;
+    padding: 2vw;
 }
 .contact {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 98vh;
     overflow: hidden;
@@ -185,11 +217,39 @@ button {
 .contact .left{
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 2vw;
+    height: 100%;
 }
-
-.contact .left img{
-    width: 200px;
+.contact .left img:nth-child(1){
+    width: 150px;
+}
+.contact .left img[alt=App]{
+    width: 240px;
+}
+.contact .left .button{
+    width: 100%;
+    text-align: center;
+    padding: 2vw;
+    margin: 3rem auto;
+}
+.contact .left .button button{
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #ca8a04;
+    font-weight: 700;
+    font-size: 16px;
+    margin: auto;
+    box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000, 0 0 #0000,0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
+}
+.contact .left .button button:hover{
+    background-color: #dc2626;
+    color: white;
+}
+.contact .left .button button img{
+    width: 20px;
 }
 .contact form {
     border: 3px solid rgb(64 64 64);
