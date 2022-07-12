@@ -42,11 +42,17 @@ button {
     width: 100%;
     height: 2px;
     background-color: black;
+    transition: all .8s;
 }
 .disappear{
-    display: none;
+    opacity: 0;
 }
-.line{}
+.rot1{
+    transform: rotate(405deg) translate(-5px,-6px);
+}
+.rot2{
+    transform: rotate(-405deg) translate(-5px,5px);
+}
 .hero .grad_bg{
     position: absolute;
     z-index: -2;
