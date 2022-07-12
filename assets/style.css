@@ -535,6 +535,11 @@ button {
         height: 50%;
     }
 }
+@media screen and (min-height: 700px){
+    .contact{
+        height: 50vh;
+    }
+}
 @media screen and (max-height: 1099px){
     .hero .grad_bg{
         height: 60%;
