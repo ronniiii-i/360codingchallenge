@@ -175,7 +175,10 @@ button {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    /* background-color: pink; */
+    padding: 7vw;
 }
 .cta .content{
     width: 40%;
@@ -204,8 +207,18 @@ button {
     width: 50%;
 }
 .cta .image img{
-    width: 80%;
+    width: 90%;
     padding: 2vw;
+}
+.cta .circle{
+    z-index: -2;
+    width: 360px;
+    height: 360px;
+    border: 8px solid #ca8a04;
+    border-radius: 10000px;
+    position: absolute;
+    bottom: -1vw;
+    right: 2vw;
 }
 .contact {
     display: flex;
@@ -281,6 +294,7 @@ button {
 }
 .contact form textarea{
     resize: none;
+    min-height: 180px;
 }
 .contact form input[type = submit]{
     width: 30%;
@@ -288,6 +302,12 @@ button {
     min-width: 150px;
     background-color: #ca8a04;
     font-weight: 700;
+    font-size: 18px;
+}
+.contact form input[type = submit]:hover{
+    background-color: #dc2626;
+    color: white;
+    border-color: #dc2626;
 }
 .contact form .textarea{
     position: relative;
