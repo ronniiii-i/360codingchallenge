@@ -59,8 +59,7 @@ button {
     background: linear-gradient(#ca8a04, #facc15);
     left: 0;
     right: 0;
-    /* bottom: 150px; */
-    height: 100vh;
+    height: 100%;
 }
 .hero nav.collapse_menu{
     display: flex;
@@ -137,6 +136,9 @@ button {
 }
 .hero .main img{
     padding: 1vw;
+    width: 80%;
+    max-width: 350px;
+    min-width: 150px;
 }
 .hero .button{
     width: 100%;
@@ -166,6 +168,7 @@ button {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 7vw 0;
 }
 .offers div {
     display: flex;
@@ -180,6 +183,7 @@ button {
     align-items: center;
     text-align: center;
     width: 25%;
+    gap: 1vw;
     /* flex: 1 1; */
 }
 .offers div .col .border{
@@ -284,6 +288,7 @@ button {
     align-items: center;
     height: 98vh;
     overflow: hidden;
+    padding: 5vw 0;
 }
 .contact .left{
     display: flex;
@@ -325,7 +330,7 @@ button {
 .contact form {
     border: 3px solid rgb(64 64 64);
     border-radius: 10px;
-    padding: 2vw;
+    padding: 24px;
     width: 40%;
 }
 .contact form h1{
@@ -386,11 +391,15 @@ button {
 }
 
 @media screen and (max-width: 1024px){
+    .partners .our_partners{
+        width: 90%;
+    }
     .cta{
         flex-direction: column-reverse;
     }
     .cta .content{
         width: 60%;
+        min-width: 450px;
     }
     .cta .image{
         width: 70%;
@@ -398,6 +407,9 @@ button {
     .cta .circle{
         width: 250px;
         height: 250px;
+    }
+    .hero .main img{
+        padding: 5vw;
     }
 }
 @media screen and (max-width: 1023px){
@@ -412,6 +424,12 @@ button {
     }
 }
 @media screen and (max-width: 767px){
+    .hero .grad_bg{
+        height: 90%;
+    }
+    .hero .main img{
+        padding: 8vw;
+    }
     .hero nav {
         background-color: #ca8a04;
         /* display: block; */
@@ -429,5 +447,76 @@ button {
     }
     .hero #burger{
         display: flex;
+    }
+    .offers{
+        justify-content: center;
+    }
+    .offers img{
+        display: none
+    }
+    .offers div{
+        flex-direction: column;
+    }
+    .offers div .col {
+        width: 100%;
+    }
+    .partners .our_partners{
+        width: 90%;
+    }
+    .cta .image{
+        width: 90%;
+    }
+    .cta .circle{
+        display: none;
+    }
+    .contact{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .contact .left img[alt=App]{
+        display: none;
+    }
+    .contact form{
+        min-width: 350px;
+    }
+}
+@media screen and (max-width: 744px){
+    .partners .our_partners{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    .hero .grad_bg{
+        height: 85%;
+    }
+    .cta .content{
+        width: 100%;
+        min-width: 100%;
+    }
+    .cta .image{
+        width: 100%;
+    }
+    .hero .main img{
+        padding: 10vw;
+    }
+}
+@media screen and (max-width: 400px){
+    .hero .grad_bg{
+        height: 80%;
+    }
+}
+@media screen and (max-width: 370px){
+    .hero .grad_bg{
+        height: 75%;
+    }
+}
+@media screen and (max-width: 350px){
+    .contact form{
+        min-width: 97%
+    }
+}
+@media screen and (max-width: 340px){
+    .hero .grad_bg{
+        height: 70%;
     }
 }
