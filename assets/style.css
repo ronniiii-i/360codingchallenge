@@ -26,6 +26,23 @@ button {
     background-position: 50% 80%;
     background-size: 90%;
 }
+.hero #burger{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    /* position: absolute;
+    top: 20px;
+    right: 20px; */
+    z-index: 4;
+    cursor: pointer;
+}
+.hero #burger .line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
 .hero .grad_bg{
     position: absolute;
     z-index: -2;
@@ -35,7 +52,29 @@ button {
     /* bottom: 150px; */
     height: 100vh;
 }
-.hero .nav {
+.hero nav.collapse_menu{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100%;
+    z-index: 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.show{
+    display: flex;
+    top: 0;
+    bottom: 0;
+}
+.hero nav.collapse_menu ul{
+    text-align: center;
+}
+.hero nav.collapse_menu ul li{
+    padding: 16px;
+}
+.hero nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -43,32 +82,41 @@ button {
     /* background-color: #ca8a04; */
     padding: 2vw;
 }
-.hero .nav .menu ul li {
+.hero nav ul li{
+    list-style: none;
+}
+.hero nav .menu ul li {
     display: inline-block;
 }
-.hero .nav .menu ul li a{
+.hero nav ul li a{
     font-weight: 600;
     font-size: 18px;
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
 }
-.hero .nav .menu ul li a:hover{
+.hero nav ul li a:hover{
     opacity: 0.75;
 }
-.hero .nav .buttons button{
+.hero nav .logo img{
+    max-width: 270px;
+    min-width: 220px;
+    width: 70%;
+}
+.hero nav button{
     color: white;
     font-size: 18px;
     font-weight: 500;
     padding: 16px;
 }
-.hero .nav .buttons button:hover{
+.hero nav button:hover{
     opacity: 0.75;
 }
-.hero .nav .buttons button:nth-child(1){
+.hero nav button:nth-child(1){
     background-color: #ff4444;
 }
-.hero .nav .buttons button:nth-child(2){
+.hero nav button:nth-child(2),
+.hero nav.collapse_menu ul li:nth-child(4) button{
     background-color: black;
 }
 .hero .main {
@@ -172,13 +220,13 @@ button {
     border-radius: 10px;
 }
 .cta {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     /* background-color: pink; */
-    padding: 7vw;
+    padding: 0 7vw;
 }
 .cta .content{
     width: 40%;
@@ -217,7 +265,7 @@ button {
     border: 8px solid #ca8a04;
     border-radius: 10000px;
     position: absolute;
-    bottom: -1vw;
+    bottom: 0;
     right: 2vw;
 }
 .contact {
@@ -325,4 +373,48 @@ button {
     transform: translate(0, calc(-1vw - 20px)) scale(.9);
     left: 0;
     transform-origin: top left;
+}
+
+@media screen and (max-width: 1024px){
+    .cta{
+        flex-direction: column-reverse;
+    }
+    .cta .content{
+        width: 60%;
+    }
+    .cta .image{
+        width: 70%;
+    }
+    .cta .circle{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 1023px){
+    .hero nav {
+        background-color: #ca8a04;
+        position: relative;
+        padding-top: 70px
+    }
+    .hero nav .logo{
+        position: absolute;
+        top: 10px;
+    }
+}
+@media screen and (max-width: 767px){
+    .hero nav {
+        background-color: #ca8a04;
+        /* display: block; */
+        padding: 2vw;
+    }
+    .hero nav.collapse_menu{
+        display: flex;
+    }
+    .hero nav .menu,
+    .hero nav .buttons{
+        display: none;
+    }
+    .hero nav .logo{
+        position: relative;
+    }
 }
