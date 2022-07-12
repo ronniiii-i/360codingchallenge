@@ -29,7 +29,7 @@ button {
 .hero #burger{
     width: 30px;
     height: 30px;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: space-evenly;
     /* position: absolute;
@@ -426,5 +426,8 @@ button {
     }
     .hero nav .logo{
         position: relative;
+    }
+    .hero #burger{
+        display: flex;
     }
 }
